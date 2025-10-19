@@ -106,13 +106,13 @@ export function MainChatInterface({ className }: MainChatInterfaceProps) {
                   </p>
                   <div className="space-y-1">
                     <p className="text-sm text-gray-600 dark:text-gray-300">
-                      • "What are my current medications?"
+                      • &ldquo;What are my current medications?&rdquo;
                     </p>
                     <p className="text-sm text-gray-600 dark:text-gray-300">
-                      • "Summarize my recent lab results"
+                      • &ldquo;Summarize my recent lab results&rdquo;
                     </p>
                     <p className="text-sm text-gray-600 dark:text-gray-300">
-                      • "@research What are the latest diabetes treatments?"
+                      • &ldquo;@research What are the latest diabetes treatments?&rdquo;
                     </p>
                   </div>
                 </div>

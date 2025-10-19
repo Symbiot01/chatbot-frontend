@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { medrecsApi } from '@/lib/api-client';
-import { ChatMessage, SessionState, UploadProgress } from '@/types/api';
+import { ChatMessage, SessionState, UploadProgress, Document } from '@/types/api';
 import { parseEmbeddedSources, extractAnswerWithoutSources } from '@/lib/source-parser';
 
 interface ChatContextType {
@@ -15,7 +15,7 @@ interface ChatContextType {
   isLoadingMessages: boolean;
   
   // Documents
-  documents: unknown[];
+  documents: Document[];
   isLoadingDocuments: boolean;
   
   // Upload
@@ -48,7 +48,7 @@ export function ChatProvider({ children }: ChatProviderProps) {
   const [currentSession, setCurrentSession] = useState<SessionState | null>(null);
   const [sessions, setSessions] = useState<SessionState[]>([]);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [documents, setDocuments] = useState<unknown[]>([]);
+  const [documents, setDocuments] = useState<Document[]>([]);
   const [uploadProgress, setUploadProgress] = useState<UploadProgress[]>([]);
   const [isLoadingMessages, setIsLoadingMessages] = useState(false);
   const [isLoadingDocuments, setIsLoadingDocuments] = useState(false);
